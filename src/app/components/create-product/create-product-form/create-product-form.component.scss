@@ -1,0 +1,105 @@
+main{
+    width: 100%;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .divPadre{
+        width: 60%;
+        margin: 60px 0px;
+        background-color: white;
+        padding: 20px 40px 80px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        &__titulo{
+            &--text{
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 36px;
+                margin-bottom: 50px;
+            }
+        }
+        .divHijo{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .divForm{
+            &__formulario{
+                &--cate{
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-bottom: 12px;
+                }
+                &--input{
+                    width: 518px;
+                    height: 36px;
+                    border-radius: 4px;
+                    margin-bottom: 22px;
+                    border: 1px solid grey;
+                    padding-left: 10px;
+                }
+            }
+            &__divButton{
+                display: flex;
+                justify-content: flex-end;
+                &--button{
+                    width: 150px;
+                    height: 32px;
+                    border-radius: 4px;
+                    background-color: #F89F21;
+                    border: none;
+                }
+                &--button:hover{
+                    width: 150px;
+                    height: 32px;
+                    border-radius: 4px;
+                    background-color: #e49221;
+                    border: none;
+                }
+            }
+        }
+        .divPrint{
+            padding-right: 108px;
+            &__titulo{
+                font-size: 14px;
+                font-weight: 400;
+                margin-bottom: 36px;
+            }
+            &__divObjeto{
+                width: 258px;
+                &--img{
+                    width: 226px;
+                    margin: 5px;
+                }
+                &--name{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 5px;
+                }
+                &--price{
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 36px;
+                    margin: 5px;
+                }
+                &--description{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #787885;
+                    margin: 5px;
+                }
+                &--opinion{
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}

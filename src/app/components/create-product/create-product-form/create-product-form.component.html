@@ -1,0 +1,40 @@
+<main>
+    <div class="divPadre">
+        <div class="divPadre__titulo">
+            <h2 class="divPadre__titulo--text">Creación/edición de productos</h2>
+        </div>
+        <div class="divHijo">
+            <div class="divForm">
+                <div class="divForm__formulario">
+                    <p class="divForm__formulario--cate">Nombre del producto:</p>
+                    <input class="divForm__formulario--input" type="text" [(ngModel)]="nombre" placeholder="Por ej: Tiesto para planta">
+                    <p class="divForm__formulario--cate">Precio:</p>
+                    <input class="divForm__formulario--input" type="text" [(ngModel)]="precio" placeholder="Por ej: 9.50">
+                    <p class="divForm__formulario--cate">Descripción:</p>
+                    <input class="divForm__formulario--input" type="text" [(ngModel)]="descripcion" placeholder="Por ej: Lo más vendido este mes">
+                    <p class="divForm__formulario--cate">Ruta de la imagen:</p>
+                    <input class="divForm__formulario--input" type="text" [(ngModel)]="img" placeholder="Por ej: http://blabla.com/img.jpg">
+                    <p class="divForm__formulario--cate">Opiniones:</p>
+                    <input class="divForm__formulario--input" type="text" [(ngModel)]="opinion" placeholder="Por ej: 4.28">
+                </div>
+                <div class="divForm__divButton">
+                    <button (click)="saveData()" class="divForm__divButton--button">Guardar</button>
+                </div>
+            </div>
+            <div class="divPrint">
+                <h2 class="divPrint__titulo">Preview del producto:</h2>
+                <div class="divPrint__divObjeto">
+                    <img class="divPrint__divObjeto--img" src="{{img}}" alt="">
+                    <p class="divPrint__divObjeto--name">{{nombre}}</p>
+                    <p class="divPrint__divObjeto--price">{{precio}}</p>
+                    <p class="divPrint__divObjeto--description">{{descripcion}}</p>
+                    <p class="divPrint__divObjeto--opinion">{{opinion}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- <input type="text" [(ngModel)]="text"> -->
+<!-- <button (click)="save()">Guardar</button> -->

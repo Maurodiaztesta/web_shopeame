@@ -1,0 +1,26 @@
+main{
+    width: 100%;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .divMain{
+        width: 60%;
+        margin: 60px 0px;
+        background-color: white;
+        padding-bottom: 80px;
+        &__divTitulo{
+            margin: 60px 40px 80px 40px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        &__textos{
+            margin: 0px 30px;
+            &--pregunta{
+                font-weight: 800;
+                margin: 25px 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,138 @@
+img{
+    width: 100px;
+}
+
+main{
+    width: 100%;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .divPadre{
+        width: 60%;
+        margin: 60px 0px;
+        background-color: white;
+        padding-bottom: 80px;
+        &__menu{
+            display: flex;
+            justify-content: space-between;
+            margin: 40px;
+            &--texto{
+                &--titulo{
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+            }
+            &--changes{
+                &--botones{
+                    display: flex;
+                    justify-content: end;
+                    margin-bottom: 15px;
+                    &--button{
+                        width: 68px;
+                        height: 36px;
+                        border-radius: 4px;
+                        background-color: white;
+                        border: 1px solid rgb(218, 218, 218);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                    &--button:hover{
+                        width: 68px;
+                        height: 36px;
+                        border-radius: 4px;
+                        background-color: lightgray;
+                        border: 1px solid rgb(218, 218, 218);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                }
+                &--input{
+                    width: 200px;
+                    height: 36px;
+                    border: 1px solid;
+                    border-radius: 4px;
+                    padding-left: 10px;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+        &__gallery{
+            margin: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            &--hijo{
+                margin: 20px;
+                &--img{
+                    width: 200px;
+                    margin: 5px;
+                }
+                &--name{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 5px;
+                }
+                &--price{
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 36px;
+                    margin: 5px;
+                }
+                &--description{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #787885;
+                    margin: 5px;
+                }
+            }
+            &--bottom{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                &--estrellas{
+                    margin: 10px;
+                }
+                &--button{
+                    margin: 10px;
+                    width: 64px;
+                    height: 24px;
+                    background-color: white;
+                    color: #2264D1;
+                    border: 1px solid #9DC2FF;
+                    border-radius: 4px;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+            }
+        }
+        &__gallery2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            &--hijo2{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 70%;
+            }
+        }
+    }
+}

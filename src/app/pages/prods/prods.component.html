@@ -1,0 +1,31 @@
+
+<main>
+    <div class="divPadre">
+        <div class="divPadre__menu">
+            <div class="divPadre__menu--texto">
+                <h2 class="divPadre__menu--titulo">Listado de Productos</h2>
+            </div>
+            <div class="divPadre__menu--changes">
+                <div class="divPadre__menu--changes--botones">
+                    <button (click)="changeFormatTrue()" class="divPadre__menu--changes--botones--button"><img src="assets\icono_lista.png" alt=""></button>
+                    <button (click)="changeFormatFalse()" class="divPadre__menu--changes--botones--button"><img src="assets\icono_galeria.png" alt=""></button>
+                </div>
+                
+                <input (input)="findByName()" class="divPadre__menu--changes--input" type="text" placeholder="Buscador" [(ngModel)]="buscador">
+            </div>
+        </div>
+        <div [ngClass]="gallery == true ? 'divPadre__gallery' : 'divPadre__gallery2'">
+            <div [ngClass]="gallery == true ? 'divPadre__gallery--hijo' : 'divPadre__gallery2--hijo2'" *ngFor="let product of products">
+            <!-- <div [ngClass]="gallery == true ? 'divPadre__gallery--hijo' : 'divPadre__gallery--hijo2'" class="divPadre__gallery--hijo" *ngFor="let product of products"> -->
+                <img class="divPadre__gallery--hijo--img" src="{{product.image}}" alt="{{product.name}}">
+                <p class="divPadre__gallery--hijo--name">{{product.name}}</p>
+                <p class="divPadre__gallery--hijo--price">${{product.price}}</p>
+                <p class="divPadre__gallery--hijo--description">{{product.description}}</p>
+                <div class="divPadre__gallery--bottom">
+                    <p class="divPadre__gallery--bottom--estrellas">Estrellas {{product.stars}}</p>
+                    <button class="divPadre__gallery--bottom--button">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
