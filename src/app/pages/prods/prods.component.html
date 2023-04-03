@@ -7,8 +7,8 @@
             </div>
             <div class="divPadre__menu--changes">
                 <div class="divPadre__menu--changes--botones">
-                    <button (click)="changeFormatTrue()" class="divPadre__menu--changes--botones--button"><img src="assets\icono_lista.png" alt=""></button>
-                    <button (click)="changeFormatFalse()" class="divPadre__menu--changes--botones--button"><img src="assets\icono_galeria.png" alt=""></button>
+                    <button [ngClass]="gallery == true ? 'divPadre__menu--changes--botones--button' : 'divPadre__menu--changes--botones--button2'" (click)="changeFormatTrue()"><img src="assets\icono_lista.png" alt=""></button>
+                    <button [ngClass]="gallery == false ? 'divPadre__menu--changes--botones--button' : 'divPadre__menu--changes--botones--button2'" (click)="changeFormatFalse()"><img src="assets\icono_galeria.png" alt=""></button>
                 </div>
                 
                 <input (input)="findByName()" class="divPadre__menu--changes--input" type="text" placeholder="Buscador" [(ngModel)]="buscador">
@@ -16,7 +16,6 @@
         </div>
         <div [ngClass]="gallery == true ? 'divPadre__gallery' : 'divPadre__gallery2'">
             <div [ngClass]="gallery == true ? 'divPadre__gallery--hijo' : 'divPadre__gallery2--hijo2'" *ngFor="let product of products">
-            <!-- <div [ngClass]="gallery == true ? 'divPadre__gallery--hijo' : 'divPadre__gallery--hijo2'" class="divPadre__gallery--hijo" *ngFor="let product of products"> -->
                 <img class="divPadre__gallery--hijo--img" src="{{product.image}}" alt="{{product.name}}">
                 <p class="divPadre__gallery--hijo--name">{{product.name}}</p>
                 <p class="divPadre__gallery--hijo--price">${{product.price}}</p>

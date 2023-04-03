@@ -10,15 +10,19 @@ export class CreateProductFormComponent {
 
   @Output() saveEmitter = new EventEmitter();
 
-  nombre: string = "Jarabe marca blanca";
-  precio: string = "12.5";
-  descripcion: string = "No cura el COVID, pero está muy rico.";
-  img: string = "https://i.ibb.co/mhgHWnf/jarabe.jpg";
-  opinion: string = "Estrellas 1";
+  nombre: string = "";
+  precio: string = "";
+  descripcion: string = "";
+  img: string = "";
+  opinion: string = "";
 
   constructor (private objectsService : ObjectsService) {};
   
-  newProduct = 
+  
+  
+
+  saveData(){
+    let newProduct = 
     {
       image: this.img,
       name: this.nombre,
@@ -26,10 +30,9 @@ export class CreateProductFormComponent {
       price: this.precio,
       stars: this.opinion,
     }
-  
 
-  saveData(){
-    this.objectsService.postProducts(this.newProduct)
+    this.objectsService.postProducts(newProduct)
+    
   }
 
 }
